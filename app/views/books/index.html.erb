@@ -3,7 +3,4 @@
   <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
 <% end %>
 
-<%= form_tag '/books', method: 'post' do %>
-  <input type="text" name="title" />
-  <input type="submit" value="Ajouter le livre" />
-<% end %>
+<%= render "books/form" %>

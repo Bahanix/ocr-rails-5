@@ -1,9 +1,6 @@
 <h1><%= @book.title %></h1>
 
-<%= form_tag "/books/#{@book.id}", method: "patch" do %>
-  <input type="text" name="title" value="<%= @book.title %>" />
-  <input type="submit" value="Modifier le livre" />
-<% end %>
+<%= render "books/form" %>
 
 <%= form_tag "/books/#{@book.id}", method: "delete" do %>
   <input type="submit" value="Supprimer le livre" />
