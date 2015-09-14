@@ -10,6 +10,7 @@ class BooksController < ApplicationController
       flash[:success] = "Le livre a été bien été créé."
       redirect_to "/books"
     else
+      @books = Book.all
       render "index"
     end
   end
